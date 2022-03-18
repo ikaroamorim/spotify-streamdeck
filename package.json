@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server/index.js",
     "live-reload": "nodemon server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "set NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "engines": {
     "node": "17"
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/ikaroamorim/spotify-streamdeck#readme",
   "devDependencies": {
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
