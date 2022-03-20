@@ -54,7 +54,7 @@ describe('#Routes - test site for api response', () => {
 
       jest.spyOn(
          mockFileStream,
-         "pipe"
+         'pipe'
       ).mockReturnValue()
 
       await handler(...params.values())
@@ -91,9 +91,9 @@ describe('#Routes - test site for api response', () => {
    test(`GET /index.html - should respond with a file stream`, async () => {
       const params = TestUtil.defaultHandleParams()
       const filename = '/index.html'
+      const expectedType = '.html'
       params.request.method = 'GET'
       params.request.url = filename
-      const expectedType = '.html'
 
       const mockFileStream = TestUtil.generateReadableStream(['data'])
 
