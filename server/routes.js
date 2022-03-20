@@ -80,6 +80,8 @@ function handleError(error, response) {
       return response.end()
    } else {
       logger.error(`caught error on API ${error.stack}`)
+      response.writeHead(500)
+      return response.end()
    }
 }
 
